@@ -25,9 +25,12 @@ const habitsSlice = createSlice({
     addHabit: (state, action) => {
       state.habits = [...state.habits, action.payload]
     },
+    deleteHabit: (state, action) => {
+      state.habits = state.habits.filter(habit => habit.title !== action.payload)
+    }
   },
 })
 
-export const { addHabit } = habitsSlice.actions
+export const { addHabit, deleteHabit } = habitsSlice.actions
 
 export default habitsSlice.reducer

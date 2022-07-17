@@ -2,7 +2,7 @@ import { Nav, Container } from 'react-bootstrap'
 
 const Header = () => {
   return (
-    <Nav className='bg-primary p-2'>
+    <Nav className='bg-primary p-2 background'>
       <Container>
         <h3 className='fw-bold'>Ninja Habits</h3>
       </Container>
