@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import Overview from './components/Overview'
+import Details from './components/Details'
+import { Row, Col, Container } from 'react-bootstrap'
 
+
+var habits = []
+export { habits}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <Container>
+        <Row className='mt-5'>
+          <Col md={3}>
+            <Overview />
+          </Col>
+          <Col md={9}>
+            <Details />
+          </Col>
+        </Row>
+      </Container>
+    </>
+  )
 }
 
-export default App;
+export default App
