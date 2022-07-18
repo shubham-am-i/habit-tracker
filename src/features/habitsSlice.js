@@ -13,9 +13,9 @@ export const details = [
 const habitsFromStorage = localStorage.getItem('newHabits')
   ? JSON.parse(localStorage.getItem('newHabits'))
   : { title: 'early bird', description: 'wake up at 3:45am', details }
+
 let habits = [...habitsFromStorage]
 
-console.log(habitsFromStorage)
 const initialState = {
   habits: habits,
 }

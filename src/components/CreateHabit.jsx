@@ -9,8 +9,12 @@ const CreateHabit = (props) => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
 
+
+
+
   const AddHabitHandler = () => {
     dispatch(addHabit({ title, description, details }))
+
     props.onHide()
   }
 
@@ -18,7 +22,7 @@ const CreateHabit = (props) => {
     <Modal {...props} size='sm' aria-labelledby='contained-modal-title-vcenter' centered>
       <Modal.Dialog className='modal-sm'>
         <Modal.Body>
-          <Form onSubmit={() => AddHabitHandler} name='form'>
+          <Form onSubmit={() => AddHabitHandler}>
             <Form.Group controlId='title'>
               <Form.Label>Habit Title</Form.Label>
               <Form.Control

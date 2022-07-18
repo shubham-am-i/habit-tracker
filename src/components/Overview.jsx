@@ -4,18 +4,15 @@ import { Row, Col, ListGroup, Button } from 'react-bootstrap'
 import { deleteHabit } from '../features/habitsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
-
 const Overview = () => {
   const [modalShow, setModalShow] = React.useState(false)
 
   const dispatch = useDispatch()
   const { habits } = useSelector((state) => state.allHabits)
 
-  const deleteHandler = (name) =>{
+  const deleteHandler = (name) => {
     dispatch(deleteHabit(name))
   }
-
- 
 
   return (
     <>
@@ -37,7 +34,10 @@ const Overview = () => {
               </Col>
               <Col md={8}>{habit.title}</Col>
               <Col md={1}>
-                <i class='fa-solid fa-trash' style={{fontSize: "12px"}} onClick={() => deleteHandler(habit.title)}></i>
+                <i
+                  className='fa-solid fa-trash'
+                  style={{ fontSize: '12px' }}
+                  onClick={() => deleteHandler(habit.title)}></i>
               </Col>
             </Row>
           </ListGroup.Item>

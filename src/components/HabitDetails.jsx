@@ -1,4 +1,5 @@
 
+import { Fragment } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { changeStatus } from '../features/habitsSlice'
@@ -50,8 +51,8 @@ const HabitDetails = ({ habit, habit: { details } }) => {
   return (
     <Row>
       {details.map((detail) => (
-        <>
-          <Col key={detail.day}>
+        <Fragment key={detail.day}>
+          <Col >
             <p className='day-headings'>{detail.day}</p>
 
             {detail.status === 'none' && (
@@ -72,7 +73,7 @@ const HabitDetails = ({ habit, habit: { details } }) => {
                 onClick={() => failStatusHandler([habit.title, detail.day])}></i>
             )}
           </Col>
-        </>
+        </Fragment>
       ))}
     </Row>
   )
