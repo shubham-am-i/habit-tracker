@@ -25,6 +25,7 @@ const CreateHabit = (props) => {
                 type='text'
                 placeholder='enter title'
                 value={title}
+                autoFocus={true}
                 onChange={(e) => setTitle(e.target.value)}></Form.Control>
             </Form.Group>
 

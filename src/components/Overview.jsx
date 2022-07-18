@@ -20,7 +20,7 @@ const Overview = () => {
   return (
     <>
       <Row>
-        <Col md={2}>
+        <Col sm={2} md={2}>
           <i className='fa-regular fa-calendar-minus'></i>
         </Col>
         <Col>

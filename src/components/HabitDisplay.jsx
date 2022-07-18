@@ -1,4 +1,4 @@
-import { ListGroup, Col, Row } from 'react-bootstrap'
+import { ListGroup} from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import HabitDetails from './HabitDetails'
 

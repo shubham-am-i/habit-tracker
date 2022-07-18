@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const details = [
-  { day: 'Sat', status: 'none' },
-  { day: 'Sun', status: 'none' },
   { day: 'Mon', status: 'none' },
   { day: 'Tue', status: 'none' },
   { day: 'Wed', status: 'none' },
   { day: 'Thu', status: 'none' },
   { day: 'Fri', status: 'none' },
+  { day: 'Sat', status: 'none' },
+  { day: 'Sun', status: 'none' },
 ]
 
 const habitsFromStorage = localStorage.getItem('newHabits')
