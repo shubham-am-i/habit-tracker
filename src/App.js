@@ -6,8 +6,6 @@ import { Row, Col, Container } from 'react-bootstrap'
 
 function App() {
 
-
-
   return (
     <>
       <Header />

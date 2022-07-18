@@ -2,28 +2,16 @@ import { useState } from 'react'
 import { Modal, Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { addHabit } from '../features/habitsSlice'
+import { details } from '../features/habitsSlice'
 
 const CreateHabit = (props) => {
+  const dispatch = useDispatch()
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
 
-  const details = [
-    { day: 'Sat', status: 'none' },
-    { day: 'Sun', status: 'none' },
-    { day: 'Mon', status: 'none' },
-    { day: 'Tue', status: 'none' },
-    { day: 'Wed', status: 'none' },
-    { day: 'Thu', status: 'none' },
-    { day: 'Fri', status: 'none' },
-  ]
-
-  const dispatch = useDispatch()
-
   const AddHabitHandler = () => {
     dispatch(addHabit({ title, description, details }))
-    
     props.onHide()
-    console.log('click')
   }
 
   return (

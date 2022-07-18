@@ -5,10 +5,8 @@ import { changeStatus } from '../features/habitsSlice'
 
 const HabitDetails = ({ habit, habit: { details } }) => {
   const dispatch = useDispatch()
-  const [status, setStatus] = useState('none')
 
   const checkStatusHandler = (info) => {
-    
     dispatch(
       changeStatus({
         title: info[0],
@@ -62,14 +60,12 @@ const HabitDetails = ({ habit, habit: { details } }) => {
                 onClick={() => checkStatusHandler([habit.title, detail.day])}></i>
             )}
 
-
             {detail.status === 'done' && (
               <i
                 className=' fa-lg fa-solid fa-circle-check done'
                 onClick={() => doneStatusHandler([habit.title, detail.day])}></i>
             )}
 
-           
             {detail.status === 'fail' && (
               <i
                 className=' fa-lg fa-solid fa-circle-xmark fail'

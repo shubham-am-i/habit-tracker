@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const details = [
-  { day: 'Sat', status: 'done' },
+export const details = [
+  { day: 'Sat', status: 'none' },
   { day: 'Sun', status: 'none' },
-  { day: 'Mon', status: 'done' },
-  { day: 'Tue', status: 'done' },
-  { day: 'Wed', status: 'fail' },
+  { day: 'Mon', status: 'none' },
+  { day: 'Tue', status: 'none' },
+  { day: 'Wed', status: 'none' },
   { day: 'Thu', status: 'none' },
   { day: 'Fri', status: 'none' },
 ]
@@ -37,9 +37,7 @@ const habitsSlice = createSlice({
         if (habit.title === payload.title) {
           habit.details.map((detail) => {
             if (detail.day === payload.details[0].day) {
-              console.log(detail.day)
               detail.status = payload.details[0].status
-              console.log(habit.title, detail.day, detail.status)
             }
           })
         }
