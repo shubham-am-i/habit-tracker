@@ -8,6 +8,7 @@ const HabitDetails = ({ habit, habit: { details } }) => {
   const [status, setStatus] = useState('none')
 
   const checkStatusHandler = (info) => {
+    
     dispatch(
       changeStatus({
         title: info[0],
@@ -53,7 +54,7 @@ const HabitDetails = ({ habit, habit: { details } }) => {
       {details.map((detail) => (
         <>
           <Col key={detail.day}>
-            <p>{detail.day}</p>
+            <p className='day-headings'>{detail.day}</p>
 
             {detail.status === 'none' && (
               <i

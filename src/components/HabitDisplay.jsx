@@ -12,7 +12,7 @@ const HabitDisplay = () => {
         
           <ListGroup.Item key={index} className='mb-3 rounded gradient1'>
             <p>
-              {habit.title}&nbsp; :&nbsp; {habit.description}
+              <strong>{habit.title}</strong>&nbsp; :&nbsp; <i>{habit.description}</i>
             </p>
 
             <HabitDetails key={habit.title}  habit={habit} />

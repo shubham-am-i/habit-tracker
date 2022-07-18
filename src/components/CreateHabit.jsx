@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Modal, Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { addHabit } from '../features/habitsSlice'
-import { habits } from '../App'
 
 const CreateHabit = (props) => {
   const [title, setTitle] = useState('')
@@ -21,15 +20,10 @@ const CreateHabit = (props) => {
   const dispatch = useDispatch()
 
   const AddHabitHandler = () => {
-    const currentHabit = { title, description, details }
-    habits.push(currentHabit)
-    console.log(habits)
-    if (habits.length > 1) {
-      localStorage.setItem('newHabits', JSON.stringify(habits))
-    }
     dispatch(addHabit({ title, description, details }))
-
+    
     props.onHide()
+    console.log('click')
   }
 
   return (

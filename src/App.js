@@ -4,9 +4,10 @@ import Details from './components/HabitDisplay'
 import { Row, Col, Container } from 'react-bootstrap'
 
 
-var habits = []
-export { habits}
 function App() {
+
+
+
   return (
     <>
       <Header />
