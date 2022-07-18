@@ -12,6 +12,8 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
     "react-scripts": "5.0.1",
+    "typed.js": "^2.0.12",
+    "util": "^0.12.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

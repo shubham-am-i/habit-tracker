@@ -15,6 +15,8 @@ const Overview = () => {
     dispatch(deleteHabit(name))
   }
 
+ 
+
   return (
     <>
       <Row>

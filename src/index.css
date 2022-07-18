@@ -28,3 +28,8 @@ background-image: linear-gradient(320deg, #2b4162 0%, #12100e 34%);
 .day-headings{
     color: #049cbe;
 }
+.text-light {
+    font-family: monospace, 'Montserrat', sans-serif;
+    font-size: larger;
+    
+  }
