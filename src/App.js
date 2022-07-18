@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import Overview from './components/Overview'
-import Details from './components/Details'
+import Details from './components/HabitDisplay'
 import { Row, Col, Container } from 'react-bootstrap'
 
 

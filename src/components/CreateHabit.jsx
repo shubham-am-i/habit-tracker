@@ -8,16 +8,26 @@ const CreateHabit = (props) => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
 
+  const details = [
+    { day: 'Sat', status: 'none' },
+    { day: 'Sun', status: 'none' },
+    { day: 'Mon', status: 'none' },
+    { day: 'Tue', status: 'none' },
+    { day: 'Wed', status: 'none' },
+    { day: 'Thu', status: 'none' },
+    { day: 'Fri', status: 'none' },
+  ]
+
   const dispatch = useDispatch()
 
   const AddHabitHandler = () => {
-    const currentHabit = { title, description }
+    const currentHabit = { title, description, details }
     habits.push(currentHabit)
     console.log(habits)
-    if (habits.length !== 0) {
+    if (habits.length > 1) {
       localStorage.setItem('newHabits', JSON.stringify(habits))
     }
-    dispatch(addHabit({ title, description }))
+    dispatch(addHabit({ title, description, details }))
 
     props.onHide()
   }
