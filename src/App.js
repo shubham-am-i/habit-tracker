@@ -16,7 +16,7 @@ function App() {
         'Habits change into character.',
       ], // Strings to display
       // Speed settings, try diffrent values untill you get good results
-      startDelay: 300,
+      startDelay: 2000,
       typeSpeed: 40,
       backSpeed: 20,
       backDelay: 5000,
