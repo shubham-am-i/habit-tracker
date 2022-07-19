@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const typed = new Typed('.tag', {
       strings: [
-        "Let's start by tracking a habit for next seven days...",
+        "...okay. Let's start by tracking a habit for next seven days.",
         "It's never too late to develop good habits.",
         'Good habits formed at youth makes all the difference. - Aristotle',
         'Motivation is what gets you started. Habit is what keeps you going.',
