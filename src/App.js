@@ -10,7 +10,8 @@ function App() {
   useEffect(() => {
     const typed = new Typed('.tag', {
       strings: [
-        'It is never too late to develop good habits.',
+        "Let's start by tracking a habit for next seven days...",
+        "It's never too late to develop good habits.",
         'Good habits formed at youth makes all the difference. - Aristotle',
         'Motivation is what gets you started. Habit is what keeps you going.',
         'Habits change into character.',
@@ -41,10 +42,9 @@ function App() {
             <Details />
           </Col>
         </Row>
-      <h4 className='text-light d-flex  mt-5  justify-content-center'>
-      <span className='tag'></span>
-
-      </h4>
+        <h4 className='text-light d-flex  mt-5  justify-content-center'>
+          <span className='tag'></span>
+        </h4>
       </Container>
     </>
   )
