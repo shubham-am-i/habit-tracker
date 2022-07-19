@@ -11,8 +11,8 @@ const Overview = () => {
   const dispatch = useDispatch()
   const { habits } = useSelector((state) => state.allHabits)
 
-  console.log(habits)
 
+  // deleteHabit Handler
   const deleteHandler = (name) => {
     dispatch(deleteHabit(name))
   }
@@ -48,7 +48,7 @@ const Overview = () => {
       </ListGroup>
 
       <Row>
-        {/* <Col></Col> */}
+       
         <Col className='d-flex justify-content-end'>
           <Button
             type='button'

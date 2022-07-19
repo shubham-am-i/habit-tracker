@@ -7,6 +7,7 @@ import { changeStatus } from '../features/habitsSlice'
 const HabitDetails = ({ habit, habit: { details } }) => {
   const dispatch = useDispatch()
 
+  // handlers to change status on click
   const checkStatusHandler = (info) => {
     dispatch(
       changeStatus({

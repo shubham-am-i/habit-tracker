@@ -10,18 +10,19 @@ export const details = [
   { day: 'Sun', status: 'none' },
 ]
 
+// load habits from local storage if there are any
 const habitsFromStorage = localStorage.getItem('newHabits')
-? JSON.parse(localStorage.getItem('newHabits'))
-: [{ title: 'early bird', description: 'wake up at 3:45am', details }]
-
-
+  ? JSON.parse(localStorage.getItem('newHabits'))
+  : [{ title: 'early bird', description: 'wake up at 3:45am', details }]
 
 let habits = [...habitsFromStorage]
-console.log(habits)
 
 const initialState = {
   habits: habits,
 }
+
+
+// habitsSlice contains store, actions and reducers
 const habitsSlice = createSlice({
   name: 'habits',
   initialState,
@@ -36,7 +37,7 @@ const habitsSlice = createSlice({
       window.localStorage.setItem('newHabits', JSON.stringify(state.habits))
     },
     changeStatus: (state, { payload }) => {
-       state.habits.forEach((habit) => {
+      state.habits.forEach((habit) => {
         if (habit.title === payload.title) {
           habit.details.forEach((detail) => {
             if (detail.day === payload.details[0].day) {
@@ -49,6 +50,8 @@ const habitsSlice = createSlice({
     },
   },
 })
+
+console.log(habitsSlice)
 
 export const { addHabit, deleteHabit, changeStatus } = habitsSlice.actions
 

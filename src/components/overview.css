@@ -1,3 +1,6 @@
+
+/* CSS for heading on Mobile Screens */
+
 @media screen and (max-width: 600px) {
   .onMobile {
     display: inline-block;

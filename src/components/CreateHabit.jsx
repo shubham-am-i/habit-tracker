@@ -9,13 +9,14 @@ const CreateHabit = (props) => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
 
+  // handle new habits
   const AddHabitHandler = () => {
     dispatch(addHabit({ title, description, details }))
-
     props.onHide()
   }
 
   return (
+    // Modal Component
     <Modal {...props} size='sm' aria-labelledby='contained-modal-title-vcenter' centered>
       <Modal.Dialog className='modal-sm'>
         <Modal.Body>
