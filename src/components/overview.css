@@ -1,0 +1,22 @@
+@media screen and (max-width: 600px) {
+  .onMobile {
+    display: inline-block;
+    width: 30px;
+  }
+
+  .icons {
+    display: inline-block;
+    width: 30px;
+  }
+  .habit-title {
+    display: inline-block;
+    width: 100px;
+  }
+  .habit-container {
+    width: 50vw;
+  }
+  .mobile {
+    margin-right: auto;
+    font-size: 14px;
+  }
+}
