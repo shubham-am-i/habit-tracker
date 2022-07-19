@@ -11,10 +11,13 @@ export const details = [
 ]
 
 const habitsFromStorage = localStorage.getItem('newHabits')
-  ? JSON.parse(localStorage.getItem('newHabits'))
-  : { title: 'early bird', description: 'wake up at 3:45am', details }
+? JSON.parse(localStorage.getItem('newHabits'))
+: [{ title: 'early bird', description: 'wake up at 3:45am', details }]
+
+
 
 let habits = [...habitsFromStorage]
+console.log(habits)
 
 const initialState = {
   habits: habits,
@@ -33,9 +36,9 @@ const habitsSlice = createSlice({
       window.localStorage.setItem('newHabits', JSON.stringify(state.habits))
     },
     changeStatus: (state, { payload }) => {
-      state.habits.map((habit) => {
+       state.habits.forEach((habit) => {
         if (habit.title === payload.title) {
-          habit.details.map((detail) => {
+          habit.details.forEach((detail) => {
             if (detail.day === payload.details[0].day) {
               detail.status = payload.details[0].status
             }

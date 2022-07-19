@@ -9,9 +9,6 @@ const CreateHabit = (props) => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
 
-
-
-
   const AddHabitHandler = () => {
     dispatch(addHabit({ title, description, details }))
 
@@ -30,6 +27,7 @@ const CreateHabit = (props) => {
                 placeholder='enter title'
                 value={title}
                 autoFocus={true}
+                required={true}
                 onChange={(e) => setTitle(e.target.value)}></Form.Control>
             </Form.Group>
 

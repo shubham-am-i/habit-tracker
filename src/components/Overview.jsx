@@ -10,6 +10,8 @@ const Overview = () => {
   const dispatch = useDispatch()
   const { habits } = useSelector((state) => state.allHabits)
 
+  console.log(habits)
+
   const deleteHandler = (name) => {
     dispatch(deleteHabit(name))
   }
